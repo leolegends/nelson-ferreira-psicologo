@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Psicólogo Nelson Ferreira em Jandira/SP. Psicoterapia, avaliação psicológica, laudos e relatórios, palestras, atendimento infantil e familiar." />
+  <title>Psicólogo Nelson Ferreira | Jandira/SP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbfaf8;
+      --surface: #ffffff;
+      --surface-2: #f5f1eb;
+      --line: rgba(26, 24, 20, .10);
+      --text: #171411;
+      --muted: #635c54;
+      --accent: #6b4eff;
+      --accent-2: #b48cff;
+      --accent-soft: rgba(107, 78, 255, .10);
+      --shadow: 0 20px 60px rgba(30, 20, 60, .08);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(180,140,255,.16), transparent 30%),
+        radial-gradient(circle at 10% 20%, rgba(107,78,255,.10), transparent 24%),
+        var(--bg);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(251,250,248,.78);
+      border-bottom: 1px solid rgba(26,24,20,.06);
+    }
+    .topbar .wrap {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 18px 0;
+    }
+    .brand { display:flex; align-items:center; gap:12px; min-width: 0; }
+    .mark {
+      width: 42px; height: 42px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 12px 30px rgba(107,78,255,.26);
+      flex: 0 0 auto;
+    }
+    .brand strong { display:block; font-size: 15px; letter-spacing: -.02em; }
+    .brand span { display:block; font-size: 12px; color: var(--muted); margin-top: 1px; }
+    .nav { display:flex; align-items:center; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav a {
+      font-size: 13px; color: var(--muted); padding: 10px 11px; border-radius: 999px;
+    }
+    .nav a:hover { background: rgba(107,78,255,.08); color: var(--text); }
+    .cta {
+      display:inline-flex; align-items:center; justify-content:center; gap: 8px;
+      background: var(--text); color: white; padding: 12px 18px; border-radius: 999px;
+      font-weight: 600; font-size: 14px; box-shadow: var(--shadow);
+    }
+    .cta.alt { background: var(--accent); }
+    .hero { padding: 62px 0 24px; }
+    .hero-grid {
+      display:grid; grid-template-columns: 1.2fr .8fr; gap: 26px; align-items: stretch;
+    }
+    .card {
+      background: rgba(255,255,255,.82); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .hero-copy { padding: 42px; }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap: 8px; padding: 8px 12px; border-radius: 999px;
+      background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px;
+      letter-spacing: .02em; text-transform: uppercase;
+    }
+    h1 {
+      margin: 18px 0 14px; font-size: clamp(38px, 5vw, 70px); line-height: .96; letter-spacing: -.05em;
+      max-width: 11ch;
+    }
+    .lead { font-size: 18px; color: var(--muted); max-width: 62ch; margin: 0 0 28px; }
+    .hero-actions { display:flex; gap: 12px; flex-wrap: wrap; }
+    .stats {
+      display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px;
+    }
+    .stat {
+      padding: 16px; border-radius: 18px; background: rgba(245,241,235,.75); border: 1px solid var(--line);
+    }
+    .stat strong { display:block; font-size: 20px; margin-bottom: 2px; }
+    .stat span { color: var(--muted); font-size: 13px; }
+    .portrait {
+      position: relative; min-height: 100%; overflow:hidden;
+      background: linear-gradient(180deg, #1f1733 0%, #3b245f 42%, #f4e9d7 100%);
+    }
+    .portrait .inner {
+      padding: 28px; display:flex; flex-direction:column; height:100%; justify-content: space-between;
+      gap: 16px;
+    }
+    .portrait img {
+      width: 100%; aspect-ratio: 1 / 1.05; object-fit: cover; border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.08);
+    }
+    .portrait .note {
+      color: rgba(255,255,255,.90); font-size: 14px; line-height: 1.6;
+      background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px; padding: 16px;
+    }
+    section { padding: 24px 0; }
+    .section-head {
+      display:flex; justify-content:space-between; gap: 18px; align-items:end; margin-bottom: 18px;
+    }
+    .section-head h2 { margin: 0; font-size: clamp(24px, 3vw, 36px); letter-spacing: -.04em; }
+    .section-head p { margin: 0; color: var(--muted); max-width: 60ch; }
+    .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grid-2 { display:grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .service, .experience, .quote, .contact, .book, .topic {
+      padding: 22px; border-radius: 22px; background: rgba(255,255,255,.85); border: 1px solid var(--line); box-shadow: var(--shadow);
+    }
+    .service h3, .experience h3, .quote h3, .book h3, .contact h3, .topic h3 { margin: 0 0 8px; font-size: 20px; letter-spacing:-.03em; }
+    .service p, .experience p, .quote p, .book p, .contact p, .topic p { margin: 0; color: var(--muted); }
+    .service .link { display:inline-flex; margin-top: 14px; color: var(--accent); font-weight: 700; font-size: 14px; }
+    .pillrow { display:flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .pill { padding: 9px 12px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); color: var(--text); font-size: 13px; }
+    .bio-list { list-style:none; padding:0; margin: 18px 0 0; display:grid; gap: 10px; }
+    .bio-list li { padding: 14px 16px; background: var(--surface-2); border-radius: 16px; border: 1px solid var(--line); }
+    .quote blockquote { margin: 0; font-size: 17px; color: var(--text); }
+    .quote footer { margin-top: 14px; color: var(--muted); font-size: 13px; }
+    .testimonials { display:grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .testimonial { padding: 22px; background: rgba(255,255,255,.85); border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); }
+    .testimonial .name { font-weight: 800; margin-bottom: 4px; }
+    .testimonial .role { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
+    .contact-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contact a { color: var(--accent); font-weight: 700; }
+    .footer {
+      padding: 38px 0 50px; color: var(--muted); font-size: 13px;
+    }
+    .gallery {
+      display:grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 14px;
+    }
+    .gallery a { border-radius: 18px; overflow:hidden; display:block; border: 1px solid var(--line); background: #fff; }
+    .gallery img { width:100%; height: 170px; object-fit: cover; }
+    @media (max-width: 980px) {
+      .hero-grid, .grid-3, .grid-2, .testimonials, .contact-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: repeat(2,1fr); }
+      .section-head { align-items:flex-start; flex-direction:column; }
+      .hero-copy { padding: 28px; }
+    }
+    @media (max-width: 720px) {
+      .topbar .wrap { flex-direction: column; align-items: stretch; }
+      .nav { justify-content: flex-start; }
+      .wrap { width: min(var(--max), calc(100% - 24px)); }
+      .hero { padding-top: 28px; }
+      h1 { max-width: none; }
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true"></span>
+        <span>
+          <strong>Psicólogo Nelson Ferreira</strong>
+          <span>Jandira · Neuropsicologia · Atendimento clínico</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#experiencias">Experiências</a>
+        <a href="#opiniao">Opiniões</a>
+        <a href="#contato">Contato</a>
+        <a class="cta" href="https://www.instagram.com/nelson_ferreira_psicologo/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card hero-copy">
+          <span class="eyebrow">Psicologia clínica em Jandira/SP</span>
+          <h1>Atendimento humano, objetivo e profissional.</h1>
+          <p class="lead">
+            Um site novo para apresentar, de forma clara e elegante, os serviços de psicoterapia,
+            avaliação psicológica, laudos e palestras, além de valorizar a experiência em depressão,
+            ansiedade, terapia familiar e psicoterapia infantil.
+          </p>
+          <div class="hero-actions">
+            <a class="cta alt" href="#contato">Agendar consulta</a>
+            <a class="cta" href="https://www.nelsonferreirapsicologo.com.br/" target="_blank" rel="noopener">Ver site original</a>
+          </div>
+          <div class="stats" aria-label="Resumo rápido">
+            <div class="stat"><strong>CRP 06/127710</strong><span>Registro profissional público</span></div>
+            <div class="stat"><strong>Jandira/SP</strong><span>Centro de atendimento</span></div>
+            <div class="stat"><strong>+ de 4 frentes</strong><span>Serviços e conteúdos principais</span></div>
+          </div>
+        </div>
+        <aside class="card portrait">
+          <div class="inner">
+            <img src="https://www.nelsonferreirapsicologo.com.br/wp-content/uploads/elementor/thumbs/nelson-ferreira-ojmej5nsw62hrrvbylgx1alesynj4gech5lksiz15s.png" alt="Nelson Ferreira" />
+            <div class="note">
+              Site redesenhado com foco em clareza, confiança e conversão, reaproveitando apenas informações públicas verificáveis e reorganizando a experiência para ficar mais objetiva.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="section-head">
+        <div>
+          <h2>Serviços</h2>
+          <p>Organizamos os principais serviços em uma leitura curta e direta, com chamadas mais claras para o contato.</p>
+        </div>
+      </div>
+      <div class="grid-3">
+        <article class="service">
+          <h3>Psicoterapia</h3>
+          <p>Tratamento de problemas psicológicos como depressão, ansiedade e dificuldades de relacionamento.</p>
+          <a class="link" href="https://www.nelsonferreirapsicologo.com.br/psicoterapia/" target="_blank" rel="noopener">Ler mais</a>
+        </article>
+        <article class="service">
+          <h3>Avaliação psicológica</h3>
+          <p>Levantamento de informações para compreender características como inteligência, personalidade e interesses.</p>
+          <a class="link" href="https://www.nelsonferreirapsicologo.com.br/avaliacao-psicologica/" target="_blank" rel="noopener">Ler mais</a>
+        </article>
+        <article class="service">
+          <h3>Laudos e relatórios</h3>
+          <p>Produção de documentos descritivos sobre situações e condições psicológicas do paciente.</p>
+          <a class="link" href="https://www.nelsonferreirapsicologo.com.br/laudos-relatorios/" target="_blank" rel="noopener">Ler mais</a>
+        </article>
+        <article class="service">
+          <h3>Palestras</h3>
+          <p>Conteúdo voltado à saúde emocional, comportamental e social por meio de informações e aprendizado.</p>
+          <a class="link" href="https://www.nelsonferreirapsicologo.com.br/videos/" target="_blank" rel="noopener">Ver vídeos</a>
+        </article>
+        <article class="service">
+          <h3>Psicologia infantil</h3>
+          <p>Atuação lúdica com crianças, auxiliando no desenvolvimento e no enfrentamento de dificuldades.</p>
+          <a class="link" href="#sobre">Conhecer perfil</a>
+        </article>
+        <article class="service">
+          <h3>Blog e conteúdo</h3>
+          <p>Textos sobre ansiedade, relações afetivas, laudos, educação dos filhos e temas do dia a dia.</p>
+          <a class="link" href="https://www.nelsonferreirapsicologo.com.br/blog/" target="_blank" rel="noopener">Ver blog</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="section-head">
+        <div>
+          <h2>Quem sou eu</h2>
+          <p>Seção reescrita para ficar mais objetiva, preservando a formação e a experiência publicamente informadas.</p>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="card" style="padding:22px;">
+          <ul class="bio-list">
+            <li>Graduado em Psicologia pela UNIP — CRP 06/127710.</li>
+            <li>Curso de extensão na PUCSP sobre família, transformações na contemporaneidade e efeitos na educação escolar.</li>
+            <li>Pós-graduação em Neuropsicologia pela Uniara.</li>
+            <li>Atendimento clínico com crianças, com atuação lúdica e foco no desenvolvimento emocional.</li>
+          </ul>
+        </div>
+        <div class="quote">
+          <blockquote>“Se eu não mudar o que faço hoje, todos os amanhãs serão iguais o ontem.”</blockquote>
+          <footer>Millôr Fernandes — frase destacada no site original.</footer>
+          <div class="pillrow">
+            <span class="pill">Ansiedade</span>
+            <span class="pill">Depressão</span>
+            <span class="pill">Terapia familiar</span>
+            <span class="pill">Psicoterapia infantil</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencias">
+      <div class="section-head">
+        <div>
+          <h2>Experiências</h2>
+          <p>Dados consolidados da página pública de experiências, apresentados em formato mais legível.</p>
+        </div>
+      </div>
+      <div class="grid-2">
+        <article class="experience">
+          <h3>Áreas de experiência</h3>
+          <p>Depressão, transtornos de ansiedade, terapia familiar e psicoterapia infantil.</p>
+        </article>
+        <article class="experience">
+          <h3>Experiência profissional</h3>
+          <p>Hospital Municipal (Jandira-SP) — 2015 · CAPS (Jandira-SP) — 2015 · Instituto Cisne (Cotia-SP) — 2015.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="livro">
+      <div class="section-head">
+        <div>
+          <h2>Livro</h2>
+          <p>O site original menciona a obra “Educando Filhos para a Vida”. Mantivemos isso em destaque, de forma curta.</p>
+        </div>
+      </div>
+      <div class="book">
+        <h3>Educando Filhos para a Vida</h3>
+        <p>
+          Uma obra voltada a pais e cuidadores, com orientação para fortalecer a missão de educar e acompanhar os filhos em seu desenvolvimento.
+        </p>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="section-head">
+        <div>
+          <h2>Temas que aparecem no conteúdo</h2>
+          <p>Varredura dos sublinks e temas mais recorrentes encontrados no material público.</p>
+        </div>
+      </div>
+      <div class="grid-3">
+        <article class="topic"><h3>Ansiedade</h3><p>Sintomas físicos, emocionais e sociais, além do impacto na rotina e possíveis tratamentos.</p></article>
+        <article class="topic"><h3>Relações afetivas</h3><p>Conteúdos sobre vínculos, convivência e aprendizagem com a natureza como metáfora.</p></article>
+        <article class="topic"><h3>Laudos e relatórios</h3><p>Explicação sobre a diferença entre laudo e relatório psicológico.</p></article>
+        <article class="topic"><h3>Educação dos filhos</h3><p>Texto e livro voltados à parentalidade e ao desenvolvimento infantil.</p></article>
+        <article class="topic"><h3>Depoimentos</h3><p>Opiniões públicas de pacientes sobre acolhimento, atenção e resultado clínico.</p></article>
+        <article class="topic"><h3>Vídeos</h3><p>Temas como psicologia, emoções, depressão, ansiedade e personalidade.</p></article>
+      </div>
+    </section>
+
+    <section id="opiniao">
+      <div class="section-head">
+        <div>
+          <h2>Opiniões</h2>
+          <p>Selecionamos a ideia principal dos depoimentos: acolhimento, atenção e escuta humana.</p>
+        </div>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="name">Paciente</div>
+          <div class="role">Opinião pública</div>
+          <p>Destaca cuidado, carinho no atendimento e apoio para lidar com comportamento e disciplina familiar.</p>
+        </div>
+        <div class="testimonial">
+          <div class="name">Paciente</div>
+          <div class="role">Opinião pública</div>
+          <p>Relata profissional dedicado, prestativo, humano e com boa identificação dos pontos de ansiedade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="section-head">
+        <div>
+          <h2>Contato e atendimento</h2>
+          <p>Centralizamos os canais públicos e o endereço informado no site original.</p>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <article class="contact">
+          <h3>Agendamento</h3>
+          <p><a href="tel:+5511982138994">(11) 98213-8994</a></p>
+          <p><a href="mailto:nelson.psicologo@yahoo.com.br">nelson.psicologo@yahoo.com.br</a></p>
+          <p style="margin-top:12px;">Instagram: <a href="https://www.instagram.com/nelson_ferreira_psicologo/" target="_blank" rel="noopener">@nelson_ferreira_psicologo</a></p>
+          <p>Facebook: <a href="https://www.facebook.com/NelsonFerreiraPsicologo/" target="_blank" rel="noopener">/NelsonFerreiraPsicologo</a></p>
+        </article>
+        <article class="contact">
+          <h3>Local de atendimento</h3>
+          <p>Av. Carmine Gragnano, 48 - Centro de Jandira - SP</p>
+          <p style="margin-top:12px;">Atendimento presencial em Jandira/SP, com foco em acolhimento, clareza e experiência clínica.</p>
+          <p style="margin-top:12px;"><a class="cta alt" href="https://www.nelsonferreirapsicologo.com.br/" target="_blank" rel="noopener">Abrir site original</a></p>
+        </article>
+      </div>
+
+      <div class="gallery" aria-label="Imagens públicas reutilizáveis">
+        <a href="https://www.nelsonferreirapsicologo.com.br/wp-content/uploads/2020/01/consultorio-no-centro-de-jandira.jpeg" target="_blank" rel="noopener"><img src="https://www.nelsonferreirapsicologo.com.br/wp-content/uploads/elementor/thumbs/consultorio-no-centro-de-jandira-ojnp98sd3yordbv231ebi41vncym5d7mvqnovlve8g.jpeg" alt="Consultório no Centro de Jandira"></a>
+        <a href="https://www.nelsonferreirapsicologo.com.br/wp-content/uploads/2020/01/consultorio-centro-de-jandira.jpeg" target="_blank" rel="noopener"><img src="https://www.nelsonferreirapsicologo.com.br/wp-content/uploads/elementor/thumbs/consultorio-centro-de-jandira-ojnph7h50fl7qeamkzbj4lpgtvpkd1trn5ms902bio.jpeg" alt="Consultório no Centro de Jandira"></a>
+        <a href="https://www.nelsonferreirapsicologo.com.br/wp-content/uploads/2020/01/consultorio-centro-de-jandira-3.jpeg" target="_blank" rel="noopener"><img src="https://www.nelsonferreirapsicologo.com.br/wp-content/uploads/elementor/thumbs/consultorio-centro-de-jandira-3-ojnpu9gfxlgkzfbycmgzrb3xujd39pnk3rtk7cph3k.jpeg" alt="Consultório no Centro de Jandira"></a>
+        <a href="https://www.nelsonferreirapsicologo.com.br/wp-content/uploads/2019/08/WhatsApp-Image-2019-07-25-at-18.58.52.jpeg" target="_blank" rel="noopener"><img src="https://www.nelsonferreirapsicologo.com.br/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2019-07-25-at-18.58.52-obvqm6ebjeb6yk8aobb7u9nrs93s0511kp5ddf3zrk.jpeg" alt="Imagem pública do consultório"></a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>Reaproveitamento de informações públicas verificáveis do site original. Redesign criado para melhorar clareza, hierarchy e experiência.</div>
+    </footer>
+  </main>
+</body>
+</html>
