@@ -40,14 +40,15 @@
     img { max-width: 100%; display: block; }
     .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
     .topbar {
-      position: sticky; top: 0; z-index: 20;
-      backdrop-filter: blur(18px);
-      background: rgba(251,250,248,.78);
-      border-bottom: 1px solid rgba(26,24,20,.06);
+      position: relative;
+      z-index: 1;
+      background: rgba(251,250,248,.96);
+      border-bottom: 1px solid rgba(26,24,20,.08);
+      box-shadow: 0 1px 0 rgba(255,255,255,.75) inset;
     }
     .topbar .wrap {
       display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      padding: 18px 0;
+      padding: 16px 0;
     }
     .brand { display:flex; align-items:center; gap:12px; min-width: 0; }
     .mark {
